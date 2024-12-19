@@ -1,0 +1,3 @@
+[stat-nvim]
+src.git = "https://github.com/leath-dub/stat.nvim"
+fetch.github = "leath-dub/stat.nvim"

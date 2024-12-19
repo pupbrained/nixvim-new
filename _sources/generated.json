@@ -1,0 +1,22 @@
+{
+    "stat-nvim": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "stat-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "leath-dub",
+            "repo": "stat.nvim",
+            "rev": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4",
+            "sha256": "sha256-m27d3ZwXQHz2ilQ0e+o8K+aBcz9ng/+ig8Ss0XLFpnU=",
+            "type": "github"
+        },
+        "version": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4"
+    }
+}
