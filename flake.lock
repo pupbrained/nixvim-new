@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "borderline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713929776,
+        "narHash": "sha256-G1hV4Rt6WJ5Sm3N/yho71NTax/SMXRN2byAULyoKiko=",
+        "owner": "mikesmithgh",
+        "repo": "borderline.nvim",
+        "rev": "9e16f74bb7f3127fa1624b97f9e77ccadb4ceb64",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mikesmithgh",
+        "repo": "borderline.nvim",
+        "type": "github"
+      }
+    },
     "buffer-manager": {
       "flake": false,
       "locked": {
@@ -429,6 +445,7 @@
     },
     "root": {
       "inputs": {
+        "borderline": "borderline",
         "buffer-manager": "buffer-manager",
         "codeium": "codeium",
         "flake-utils": "flake-utils_2",

@@ -13,6 +13,11 @@
       flake = false;
     };
 
+    borderline = {
+      url = "github:mikesmithgh/borderline.nvim";
+      flake = false;
+    };
+
     buffer-manager = {
       url = "github:j-morano/buffer_manager.nvim";
       flake = false;

@@ -13,6 +13,7 @@ in {
     (specObj ["<leader>f" "" "file/find"])
     (specObj ["<leader>:" ""])
   ];
+
   plugins = {
     todo-comments.enable = true;
     telescope = {

@@ -1,4 +1,9 @@
 {
+  plugins.notify = {
+    enable = true;
+    stages = "static";
+  };
+
   plugins.noice = {
     enable = true;
     settings = {
@@ -8,10 +13,11 @@
           "vim.lsp.util.stylize_markdown" = true;
           "cmp.entry.get_documentation" = true;
         };
-        hover.enabled = false;
-        message.enabled = false;
-        signature.enabled = false;
-        progress.enabled = false;
+        notify.enabled = true;
+        hover.enabled = true;
+        message.enabled = true;
+        signature.enabled = true;
+        progress.enabled = true;
       };
     };
   };

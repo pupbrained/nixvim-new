@@ -1,0 +1,66 @@
+
+  verbose=0
+
+"~/nixvim-new/config/ui/borderline.nix" 
+"~/nixvim-new/config/ui/borderline.nix" 13L, 223B written-- VISUAL ---- VISUAL LINE --
+"~/nixvim-new/config/ui/borderline.nix" 13L, 223B written
+
+snacks_notif
+-- INSERT --
+
+-- INSERT --
+
+
+"~/nixvim-new/config/snacks/default.nix" 
+"~/nixvim-new/config/snacks/default.nix" 33L, 613B written
+
+
+
+
+"~/nixvim-new/config/snacks/default.nix" 
+"~/nixvim-new/config/snacks/default.nix" 33L, 613B written
+
+-- INSERT ---- INSERT ---- INSERT ---- INSERT ---- INSERT --
+
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 51L, 1230B written
+
+SnacksBackdropxxx guibg=#000000
+
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 51L, 1230B written
+
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 51L, 1230B written
+
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 51L, 1230B written
+
+
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 51L, 1230B written-- VISUAL LINE --
+22 lines <ed 1 time-- VISUAL LINE ---- VISUAL LINE ---- VISUAL LINE --
+11 lines >ed 1 time-- VISUAL LINE ---- VISUAL LINE --
+
+"~/nixvim-new/config/core/general.nix" 
+"~/nixvim-new/config/core/general.nix" 49L, 1154B written
+
+-- INSERT ---- INSERT ---- INSERT --
+-- INSERT ---- INSERT ---- INSERT ---- INSERT ---- INSERT ---- INSERT ---- INSERT --
+-- INSERT ---- INSERT --
+-- INSERT ---- INSERT ---- INSERT ---- INSERT ---- INSERT --
+-- INSERT --
+
+-- INSERT --
+
+-- INSERT --
+
+
+
+"~/nixvim-new/config/snacks/default.nix" 
+"~/nixvim-new/config/snacks/default.nix" 41L, 756B written

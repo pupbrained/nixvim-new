@@ -1,5 +1,4 @@
 {
-  opts,
   lib,
   config,
   ...
