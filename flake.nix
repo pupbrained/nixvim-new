@@ -7,6 +7,36 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+
+    nvim-window-picker = {
+      url = "github:s1n7ax/nvim-window-picker";
+      flake = false;
+    };
+
+    buffer-manager = {
+      url = "github:j-morano/buffer_manager.nvim";
+      flake = false;
+    };
+
+    typr = {
+      url = "github:nvzone/typr";
+      flake = false;
+    };
+
+    minty = {
+      url = "github:nvzone/minty";
+      flake = false;
+    };
+
+    volt = {
+      url = "github:nvzone/volt";
+      flake = false;
+    };
+
+    menu = {
+      url = "github:nvzone/menu";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -15,8 +45,9 @@
     nixpkgs,
     nixvim,
     treefmt-nix,
+    self,
     ...
-  }:
+  } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
@@ -26,6 +57,16 @@
 
       nvim = nixvim.legacyPackages.${system}.makeNixvimWithModule {
         inherit pkgs;
+
+        extraSpecialArgs =
+          {
+            inherit inputs;
+          }
+          // import "${self}/lib" {
+            inherit pkgs;
+            inherit (pkgs) lib;
+          };
+
         module = import ./config;
       };
     in {
