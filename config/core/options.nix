@@ -1,21 +1,29 @@
-{
-  lib,
-  pkgs,
-  ...
-}:
+{lib, ...}:
 with lib; {
   enableMan = true;
   viAlias = true;
   vimAlias = true;
 
-  clipboard.providers.wl-copy.enable = pkgs.system == "x86_64-linux";
+  autoCmd = [
+    {
+      command = "set guicursor=a:ver1-blinkon0";
+      event = "VimLeave";
+      pattern = "*";
+    }
+  ];
 
-  globals = {
-    mapleader = " ";
+  clipboard = {
+    register = "unnamedplus";
+
+    providers = {
+      wl-copy.enable = true;
+      xclip.enable = true;
+    };
   };
 
+  globals.mapleader = " ";
+
   opts = {
-    clipboard = "unnamedplus";
     cursorline = true;
     cursorlineopt = "number";
 
@@ -57,12 +65,19 @@ with lib; {
     list = true;
     smoothscroll = true;
     scrolloff = 999;
-    fillchars = {eob = " ";};
 
     #interval for writing swap file to disk, also used by gitsigns
     updatetime = 250;
+
+    fillchars = "eob: ,fold: ,foldopen:,foldsep: ,foldclose:";
+    foldcolumn = "1";
+    foldenable = true;
+    foldlevel = 99;
+    foldlevelstart = 99;
   };
+
   extraLuaPackages = ps: with ps; [luarocks];
+
   extraConfigLua = ''
     vim.opt.whichwrap:append("<>[]hl")
     vim.opt.listchars:append("space:·")

@@ -15,6 +15,7 @@
             "repo": "stat.nvim",
             "rev": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4",
             "sha256": "sha256-m27d3ZwXQHz2ilQ0e+o8K+aBcz9ng/+ig8Ss0XLFpnU=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4"

@@ -1,7 +1,7 @@
 {
   plugins.notify = {
     enable = true;
-    stages = "static";
+    settings.stages = "static";
   };
 
   plugins.noice = {

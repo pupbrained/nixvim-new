@@ -1,4 +1,4 @@
-{icons, ...}: {
+{pkgs, ...}: {
   performance.byteCompileLua = {
     enable = true;
     nvimRuntime = true;
@@ -22,28 +22,35 @@
     FloatBorder.bg = "#11111b";
   };
 
+  extraPlugins = with pkgs.vimPlugins; [
+    vim-cool
+  ];
+
   extraConfigLua = ''
-    local signs = {
-      Hint = "${icons.diagnostics.BoldHint}",
-      Info = "${icons.diagnostics.BoldInformation}",
-      Warn = "${icons.diagnostics.BoldWarning}",
-      Error = "${icons.diagnostics.BoldError}",
-    }
-
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-    end
-
     vim.diagnostic.config({
-      virtual_text = false,
-      underline = true,
-      signs = true,
-      severity_sort = true,
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = ' ',
+          [vim.diagnostic.severity.WARN] = ' ',
+          [vim.diagnostic.severity.HINT] = ' ',
+          [vim.diagnostic.severity.INFO] = ' ',
+        },
+      },
       float = {
-        border = "rounded",
-        source = "always",
-        focusable = false,
+        border = 'rounded',
+      },
+      virtual_text = {
+        prefix = function(diagnostic)
+          if diagnostic.severity == vim.diagnostic.severity.ERROR then
+            return ' '
+          elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+            return ' '
+          elseif diagnostic.severity == vim.diagnostic.severity.HINT then
+            return ' '
+          else
+            return ' '
+          end
+        end,
       },
     })
   '';
