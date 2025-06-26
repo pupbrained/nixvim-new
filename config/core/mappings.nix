@@ -6,9 +6,6 @@
   inherit (mkKey) mkKeymap;
 
   normal = [
-    (mkKeymap "n" "<a-j>" "<cmd>m .+1<cr>==" "Move line Down")
-    (mkKeymap "n" "<a-k>" "<cmd>m .-2<cr>==" "Move line up")
-
     (mkKeymap "n" "<s-h>" "<esc>:bprev<cr>" "Previous Buffer")
     (mkKeymap "n" "<s-l>" "<esc>:bnext<cr>" "Next Buffer")
 
@@ -20,12 +17,11 @@
     (mkKeymap "n" "<leader>n" "<cmd>lua vim.diagnostic.goto_next()<cr>" "Go to Next Diagnostic")
     (mkKeymap "n" "<leader>N" "<cmd>lua vim.diagnostic.goto_prev()<cr>" "Go to Previous Diagnostic")
     (mkKeymap "n" "<leader>r" "<cmd>lua vim.lsp.buf.rename()<cr>" "Rename Symbol")
+    (mkKeymap "n" "<C-d>" "<C-d>zz" "Scroll Down and Recenter")
+    (mkKeymap "n" "<C-u>" "<C-u>zz" "Scroll Up and Recenter")
   ];
 
   v = [
-    (mkKeymap "v" "<a-j>" "<cmd>m '>+1<cr>gv-gv" "Move Selected Line Down")
-    (mkKeymap "v" "<a-k>" "<cmd>m '<lt>-2<CR>gv-gv" "Move Selected Line Up")
-
     (mkKeymap "v" "<" "<gv" "Indent out")
     (mkKeymap "v" ">" ">gv" "Indent in")
   ];

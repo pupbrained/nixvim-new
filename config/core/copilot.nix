@@ -1,12 +1,13 @@
 {...}: {
-  plugins.copilot-lua = {
-    enable = true;
-    settings = {
-      filetypes.markdown = true;
+  plugins = {
+    copilot-lua.enable = true;
 
-      suggestion = {
-        enabled = false;
-        auto_trigger = false;
+    avante = {
+      enable = true;
+      settings = {
+        provider = "copilot";
+        auto_suggestions_provider = "copilot";
+        suggestion.debounce = 500;
       };
     };
   };
