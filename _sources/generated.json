@@ -1,9 +1,9 @@
 {
-    "stat-nvim": {
+    "alternate-toggler-nvim": {
         "cargoLocks": null,
-        "date": "2023-09-07",
+        "date": "2024-06-04",
         "extract": null,
-        "name": "stat-nvim",
+        "name": "alternate-toggler-nvim",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -11,13 +11,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "leath-dub",
-            "repo": "stat.nvim",
-            "rev": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4",
-            "sha256": "sha256-m27d3ZwXQHz2ilQ0e+o8K+aBcz9ng/+ig8Ss0XLFpnU=",
+            "owner": "rmagatti",
+            "repo": "alternate-toggler",
+            "rev": "819800304d3e8e575fd6aa461a8bcf2217e1cfb6",
+            "sha256": "sha256-+UXbgVRki1CGRDHRNrnXOIvzr+0lCAftzGsGVzVQwL4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "81546a867d0b2ae5d7ec57aeb7bf784395343fb4"
+        "version": "819800304d3e8e575fd6aa461a8bcf2217e1cfb6"
     }
 }

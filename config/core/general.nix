@@ -1,4 +1,14 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  mkVimPlugin = sources:
+    pkgs.vimUtils.buildVimPlugin {
+      inherit (sources) src pname version;
+      doCheck = false;
+    };
+
+  sources = import ../../_sources/generated.nix {inherit (pkgs) fetchFromGitHub fetchgit fetchurl dockerTools;};
+
+  extraPlugins = pkgs.lib.attrsets.mapAttrsToList (_: value: mkVimPlugin value) sources;
+in {
   performance.byteCompileLua = {
     enable = true;
     nvimRuntime = true;
@@ -22,9 +32,9 @@
     FloatBorder.bg = "#11111b";
   };
 
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-cool
-  ];
+  extraPlugins = with pkgs.vimPlugins;
+    [vim-cool]
+    ++ extraPlugins;
 
   extraConfigLua = ''
     vim.diagnostic.config({

@@ -1,3 +1,3 @@
-[stat-nvim]
-src.git = "https://github.com/leath-dub/stat.nvim"
-fetch.github = "leath-dub/stat.nvim"
+[alternate-toggler-nvim]
+src.git = "https://github.com/rmagatti/alternate-toggler"
+fetch.github = "rmagatti/alternate-toggler"

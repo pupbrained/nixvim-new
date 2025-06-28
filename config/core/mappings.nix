@@ -9,6 +9,7 @@
     (mkKeymap "n" "<s-h>" "<esc>:bprev<cr>" "Previous Buffer")
     (mkKeymap "n" "<s-l>" "<esc>:bnext<cr>" "Next Buffer")
 
+    (mkKeymap "n" "<leader>t" "<cmd>lua require('alternate-toggler').toggleAlternate()<cr>" "Toggle Alternate")
     (mkKeymap "n" "<leader>A" "gg0vG$" "Select All")
     (mkKeymap "n" "<leader>a" "<cmd>lua vim.lsp.buf.code_action()<cr>" "Code Action")
     (mkKeymap "n" "<leader>d" "<cmd>lua vim.diagnostic.open_float()<cr>" "Diagnostics")
