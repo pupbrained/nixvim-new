@@ -30,9 +30,16 @@
       };
     };
 
-    lsp.servers.clangd = {
-      enable = true;
-      package = null;
+    lsp.servers = {
+      clangd = {
+        enable = true;
+        packageFallback = true;
+      };
+
+      mesonlsp = {
+        enable = true;
+        packageFallback = true;
+      };
     };
 
     conform-nvim.settings.formatters_by_ft = {

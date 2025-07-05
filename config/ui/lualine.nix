@@ -94,7 +94,7 @@ in {
           color = { fg = "#ff9e64" },
         }
       end
-      -- components.location = { "location", color = { fg = "#000000" }, }
+
       components.filetype = { "filetype", cond = nil, padding = { left = 1, right = 1 } }
       components.fileformat = { "fileformat", cond = nil, padding = { left = 1, right = 1 }, color = "SLGreen" }
       components.lsp = {
