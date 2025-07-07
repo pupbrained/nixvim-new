@@ -1,4 +1,4 @@
-{...}: {
+_: {
   config.plugins.trouble = {
     enable = true;
 

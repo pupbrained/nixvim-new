@@ -1,4 +1,4 @@
-{...}: {
+_: {
   config.plugins.nvim-ufo = {
     enable = true;
     settings = {

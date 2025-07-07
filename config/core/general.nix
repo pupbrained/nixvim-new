@@ -7,7 +7,7 @@
 
   sources = import ../../_sources/generated.nix {inherit (pkgs) fetchFromGitHub fetchgit fetchurl dockerTools;};
 
-  extraPlugins = pkgs.lib.attrsets.mapAttrsToList (_: value: mkVimPlugin value) sources;
+  extraPlugins = pkgs.lib.attrsets.mapAttrsToList (_: mkVimPlugin) sources;
 in {
   performance.byteCompileLua = {
     enable = true;

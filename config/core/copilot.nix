@@ -1,4 +1,4 @@
-{...}: {
+_: {
   plugins = {
     copilot-lua.enable = true;
 
