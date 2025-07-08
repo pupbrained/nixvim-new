@@ -18,6 +18,9 @@ in {
     lz-n.enable = true;
     web-devicons.enable = true;
     nvim-autopairs.enable = true;
+    nvim-surround.enable = true;
+    trim.enable = true;
+    visual-multi.enable = true;
   };
 
   highlightOverride = {
@@ -27,14 +30,12 @@ in {
     TelescopeNormal.bg = "#11111b";
     TelescopeBorder.bg = "#11111b";
     MsgArea.bg = "#11111b";
-    NormalFloat.bg = "#11111b";
+    NormalFloat.bg =  "#11111b";
     SnacksNormal.bg = "#11111b";
     FloatBorder.bg = "#11111b";
   };
 
-  extraPlugins = with pkgs.vimPlugins;
-    [vim-cool]
-    ++ extraPlugins;
+  extraPlugins = with pkgs.vimPlugins; [vim-cool] ++ extraPlugins;
 
   extraConfigLua = ''
     vim.diagnostic.config({
@@ -46,9 +47,7 @@ in {
           [vim.diagnostic.severity.INFO] = ' ',
         },
       },
-      float = {
-        border = 'rounded',
-      },
+      float = { border = 'rounded' },
       virtual_text = {
         prefix = function(diagnostic)
           if diagnostic.severity == vim.diagnostic.severity.ERROR then

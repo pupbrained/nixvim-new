@@ -116,9 +116,7 @@ in {
 
           for _, formatter in ipairs(formatters) do
             local name = formatter.name
-            if formatter.available and (name ~= "squeeze_blanks" and name ~= "trim_whitespace" and name ~= "trim_newlines") then
-              table.insert(con_names, formatter.name)
-            end
+            table.insert(con_names, formatter.name)
           end
           local names = {}
           vim.list_extend(names, lsp_names)
