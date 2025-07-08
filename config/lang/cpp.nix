@@ -42,8 +42,6 @@ _: {
       };
     };
 
-    conform-nvim.settings.formatters_by_ft = {
-      cpp = ["clang-format"];
-    };
+    none-ls.sources.formatting.clang_format.enable = true;
   };
 }
