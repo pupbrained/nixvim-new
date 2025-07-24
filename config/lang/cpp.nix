@@ -33,7 +33,7 @@ _: {
     lsp.servers = {
       clangd = {
         enable = true;
-        packageFallback = true;
+        package = null;
       };
 
       mesonlsp = {
